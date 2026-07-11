@@ -4,6 +4,7 @@ using System.Collections.Generic;
 // Stores journal prompts and selects one at random.
 public class PromptGenerator
 {
+    // Provide more than the five prompts required by the assignment.
     public List<string> _prompts = new List<string>
     {
         "Who was the most interesting person I interacted with today?",
@@ -17,6 +18,7 @@ public class PromptGenerator
     // Return one prompt from the list using a random index.
     public string GetRandomPrompt()
     {
+        // Random.Next chooses a valid list position from zero through Count - 1.
         Random random = new Random();
         int index = random.Next(_prompts.Count);
         return _prompts[index];
