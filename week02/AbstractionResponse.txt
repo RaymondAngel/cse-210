@@ -1,0 +1,31 @@
+W02 Assignment: Explain Abstraction
+
+Important: Rewrite the notes below in your own words before submitting them.
+
+Meaning of abstraction:
+Abstraction means organizing complicated program details into simpler classes and methods. Other parts of the program can use those classes and methods without needing to understand every internal step.
+
+Benefit of abstraction:
+Abstraction makes code easier to read, follow, test, reuse, and change. It also gives each class a clear responsibility.
+
+Application in my Journal program:
+My program uses separate Program, Journal, Entry, and PromptGenerator classes. Program controls the menu, Journal manages the collection and file operations, Entry represents one journal response, and PromptGenerator selects questions.
+
+Code example from my program:
+
+public void DisplayAll()
+{
+    foreach (Entry entry in _entries)
+    {
+        entry.Display();
+    }
+}
+
+Explanation of the example:
+Program only needs to call journal.DisplayAll(). It does not need to know how the Journal loops through its entries or how each Entry formats its information. Journal and Entry handle those details. If the display format changes later, the Entry class can be updated without rewriting the menu.
+
+Final reminders:
+- Combine these ideas into at least 100 words using your natural speaking style.
+- Explain the meaning, benefit, and application of abstraction thoroughly.
+- Include the code example.
+- Add the screenshot taken at the beginning of the team meeting in Canvas.
