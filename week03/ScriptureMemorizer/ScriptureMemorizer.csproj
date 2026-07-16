@@ -1,9 +1,17 @@
 
+<!--
+  ScriptureMemorizer.csproj
+  This project file tells .NET how to compile and run the Scripture Memorizer
+  C# program. The source files in this folder are included automatically.
+-->
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <!-- Build an executable program using the installed .NET 10 framework. -->
     <OutputType>Exe</OutputType>
     <TargetFramework>net10.0</TargetFramework>
+
+    <!-- Include common namespace imports and use the course's nullable setting. -->
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
   </PropertyGroup>
