@@ -48,13 +48,23 @@ class Word
         );
     }
 
-    // Return either the original word or matching underscores for display.
+    // Return either the original word or one underscore for each letter.
+    // Punctuation stays visible and is not counted as part of the word.
     public string GetDisplayText()
     {
         if (_isHidden)
         {
-            // Use one underscore for each character in the original word.
-            return new string('_', _text.Length);
+            char[] hiddenText = _text.ToCharArray();
+
+            for (int i = 0; i < hiddenText.Length; i++)
+            {
+                if (char.IsLetterOrDigit(hiddenText[i]))
+                {
+                    hiddenText[i] = '_';
+                }
+            }
+
+            return new string(hiddenText);
         }
 
         return _text;
